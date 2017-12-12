@@ -1,0 +1,11 @@
+vagrant/udacityCategory/node_modules/
+vagrant/udacityCategory/dist/
+__pycache__
+*.pyc
+.vagrant
+catalog.sublime-project
+catalog.sublime-workspace
+vagrant/frontend/node_modules/
+vagrant/frontend/dist/
+vagrant/Vagrantfile
+vagrant/newsdata.sql
