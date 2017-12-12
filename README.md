@@ -4,12 +4,13 @@
 - [Vagrant](https://www.vagrantup.com/)
 - [Udacity Vagrantfile](https://github.com/udacity/fullstack-nanodegree-vm)
 - [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+- [Initial Data](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
 
 ## Installation 
 - install Vagrant and VirtualBox
 - clone the Vagrantfile from the Udacity Repo
 - clone this repo into the `vagrant/` folder
-- get the [data](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
+- copy the newsdata.sql file into the `vagrant/` folder
 - run `vagrant up` to run the virtual machine, then `vagrant ssh` to login to the VM
 
 ## Data Load 
