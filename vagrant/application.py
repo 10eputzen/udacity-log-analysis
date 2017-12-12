@@ -20,22 +20,25 @@ query1 = \
 query2Title = 'Who are the most popular article authors of all time?'
 query2 = \
     """
-    SELECT authors.name, count(*) as cnt from articles inner
+    SELECT authors.name, count(*) as cnt
+    from articles inner
     join authors on articles.author = authors.id inner join log
-    on log.path like concat('%', articles.slug, '%') where
-    log.status like '%200%' group
-    by authors.name order by cnt desc
+    on log.path like concat('%', articles.slug, '%')
+    where log.status like '%200%'
+    group by authors.name
+    order by cnt desc
  """
 
 query3Title = \
     'On which days did more than 1% of requests lead to errors?'
 query3 = \
     """
-        SELECT date,total,error, (error::float*100)/total::float as percent
-        from (select time::timestamp::date as Date, count(status) as total,
-        sum(case when status = '404 NOT FOUND' then 1 else 0 end) as error
-        from log group by time::timestamp::date) as res
-        where (error::float*100)/total::float > 1.0 order by percent desc;
+    SELECT date,total,error, (error::float*100)/total::float as percent
+    from (select time::timestamp::date as Date, count(status) as total,
+    sum(case when status = '404 NOT FOUND' then 1 else 0 end) as error
+    from log group by time::timestamp::date) as res
+    where (error::float*100)/total::float > 1.0
+    order by percent desc;
     """
 
 
