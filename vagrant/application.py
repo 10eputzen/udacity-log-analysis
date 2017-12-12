@@ -59,7 +59,7 @@ def topArticles():
     res = run_query(query1)
     print '\n' + query1Title
     for i in range(0, len(res), 1):
-        print '\n' + str(i + 1) + ')' + res[i][0] + ' - ' \
+        print '\n' + str(i + 1) + ') ' + res[i][0] + ' - ' \
             + str(res[i][1]) + ' views'
 
 
@@ -67,7 +67,7 @@ def popularAuthors():
     res = run_query(query2)
     print '\n' + query2Title
     for i in range(0, len(res), 1):
-        print '\n' + str(i + 1) + ')' + res[i][0] + '" - ' \
+        print '\n' + str(i + 1) + ') ' + res[i][0] + ' - ' \
             + str(res[i][1]) + ' views'
 
 
